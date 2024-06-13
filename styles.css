@@ -1,83 +1,69 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('background.jpg') center center ;
+        background-size: 110% ;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100; /* Задаем высоту вьюпорта, чтобы обеспечить покрытие всей видимой области */
+    }
+
 
 header, section, #contact, footer {
-    background: rgba(0, 0, 0, 0.5); /* `Фон секций */
-    color: rgb(255, 255, 255); /* `Текст */
+    background: rgba(0, 0, 0, 0.5); /* Фон секций */
+    color: rgb(255, 255, 255); /* Текст */
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    
 }
 
 header {
     padding: 100px 20px;
-    
 }
 
 section, #contact {
     padding: 60px 20px;
-
-    margin-top: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     padding: 20px;
-    
 }
 
 .header-content, .contact-content {
     max-width: 600px;
     margin: 0 auto;
-    
 }
 
 h1, .contact-title {
     font-size: 3em;
     margin: 0;
-    
-    
-    
 }
 
 p, header p, .service p, .case p {
     font-size: 1.2em;
     margin: 10px 0 20px;
-
 }
 
 .btn, nav a, .contact-links a, .contact-form button {
     background: #ffffff42;
-    color: #ffffff; /* `Цвет текста кнопок */
+    color: #ffffff; /* Цвет текста кнопок */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    
-    
 }
 
 .btn:hover, nav a:hover, .contact-links a:hover, .contact-form button:hover {
     background: #413434;
-    
 }
 
 nav {
     margin-top: 20px;
-    
 }
 
 nav a {
@@ -85,19 +71,16 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-size: 1.2em;
-    
 }
 
 nav a:hover {
     text-decoration: underline;
-    
 }
 
 .services-container, .cases-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .service, .case {
@@ -120,7 +103,6 @@ nav a:hover {
 }
 
 .portfolio-slider {
-
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -165,12 +147,10 @@ nav a:hover {
 .contact-links {
     list-style: none;
     padding: 0;
-
 }
 
 .contact-links li {
     margin-bottom: 30px;
-    
 }
 
 .contact-form {
@@ -210,7 +190,6 @@ nav a:hover {
     transition: background 0.3s ease;
     margin: auto; /* Центрирование кнопки по горизонтали */
     display: block; /* Делаем кнопку блочным элементом, чтобы задать ей ширину */
-
 }
 
 .contact-form form button:hover {
@@ -227,7 +206,7 @@ footer {
 }
 
 .btn {
-    background:rgba(255, 255, 255, 0.396);
+    background: rgba(255, 255, 255, 0.396);
     color: #ffffff;
     padding: 15px 30px; /* Увеличение отступов вокруг текста кнопки */
     text-decoration: none;

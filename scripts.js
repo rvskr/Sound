@@ -42,3 +42,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
         alert('Пожалуйста, заполните все обязательные поля: Имя, Email и Сообщение.');
     }
 });
+document.addEventListener('mousemove', function(e) {
+    let moveX = (e.pageX * -5 / 100);
+    let moveY = (e.pageY * -5 / 100);
+    document.body.style.backgroundPosition = moveX + 'px ' + moveY + 'px';
+});
