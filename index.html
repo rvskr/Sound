@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сведение Музыки</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Сведение Музыки</h1>
+            <p>Профессиональные услуги сведения и мастеринга</p>
+            <a href="#contact" class="btn">Связаться с нами</a>
+            <nav>
+                <a href="#services">Услуги</a>
+                <a href="#cases">Кейсы</a>
+                <a href="#portfolio">Портфолио</a>
+            </nav>
+        </div>
+    </header>
+    <section id="services">
+        <h2>Наши услуги</h2>
+        <div class="services-container">
+            <div class="service" data-aos="fade-up">
+                <h3>Сведение треков</h3>
+                <p>Высококачественное сведение ваших треков, чтобы они звучали профессионально.</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-delay="100">
+                <h3>Мастеринг</h3>
+                <p>Финальная обработка треков для достижения идеального звучания на всех устройствах.</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-delay="200">
+                <h3>Консультации</h3>
+                <p>Индивидуальные консультации по улучшению качества ваших записей.</p>
+            </div>
+        </div>
+    </section>
+    <section id="cases">
+        <h2>Наши кейсы</h2>
+        <div class="cases-container">
+            <div class="case" data-aos="fade-up">
+                <h3>Кейс 1</h3>
+                <p>Описание кейса 1: задачи, подходы, результаты.</p>
+            </div>
+            <div class="case" data-aos="fade-up" data-aos-delay="100">
+                <h3>Кейс 2</h3>
+                <p>Описание кейса 2: задачи, подходы, результаты.</p>
+            </div>
+            <div class="case" data-aos="fade-up" data-aos-delay="200">
+                <h3>Кейс 3</h3>
+                <p>Описание кейса 3: задачи, подходы, результаты.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Портфолио</h2>
+        <div class="portfolio-slider">
+            <div class="portfolio-item" data-aos="fade-up">
+                <img src="portfolio1.jpg" alt="Проект 1">
+                <h3>Проект 1</h3>
+                <p>Описание проекта 1.</p>
+                <a href="#" class="btn">Ссылка 1</a>
+                <a href="#" class="btn">Ссылка 2</a>
+            </div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="portfolio2.jpg" alt="Проект 2">
+                <h3>Проект 2</h3>
+                <p>Описание проекта 2.</p>
+                <a href="#" class="btn">Ссылка 1</a>
+                <a href="#" class="btn">Ссылка 2</a>
+            </div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="portfolio3.jpg" alt="Проект 3">
+                <h3>Проект 3</h3>
+                <p>Описание проекта 3.</p>
+                <a href="#" class="btn">Ссылка 1</a>
+                <a href="#" class="btn">Ссылка 2</a>
+            </div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="portfolio2.jpg" alt="Проект 3">
+                <h3>Проект 4</h3>
+                <p>Описание проекта 4.</p>
+                <a href="#" class="btn">Ссылка 1</a>
+                <a href="#" class="btn">Ссылка 2</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Связаться с нами</h2>
+        <div class="contact-form" data-aos="fade-up">
+            <ul class="contact-links">
+                <li><a href="tel:+1234567890">Телефон: +1 (234) 567-890</a></li>
+                <li><a href="mailto:info@example.com">Email: info@example.com</a></li>
+            </ul>
+            <form action="submit_form.php" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Сведение Музыки. Все права защищены.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        AOS.init();
+        $('.portfolio-slider').slick({
+            dots: true,
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-prev">&#8249;</button>',
+            nextArrow: '<button type="button" class="slick-next">&#8250;</button>',
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000
+        });
+    </script>
+</body>
+</html>
