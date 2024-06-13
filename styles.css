@@ -1,32 +1,32 @@
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: url('background.jpg') center center ;
-        background-size: 110% ;
-        scroll-behavior: smooth;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100; /* Задаем высоту вьюпорта, чтобы обеспечить покрытие всей видимой области */
-    }
-
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') center center;
+    background-size: cover; /* Используем cover для заполнения фона */
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Минимальная высота вьюпорта, чтобы покрыть всю видимую область */
+}
 
 header, section, #contact, footer {
-    background: rgba(0, 0, 0, 0.5); /* Фон секций */
-    color: rgb(255, 255, 255); /* Текст */
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для секций */
+    color: #ffffff; /* Белый цвет текста */
     text-align: center;
     width: 100%;
     box-sizing: border-box;
 }
 
 header {
-    padding: 100px 20px;
+    padding: 100px 20px; /* Отступы в заголовке */
 }
 
 section, #contact {
-    padding: 60px 20px;
+    padding: 60px 20px; /* Отступы в секциях */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -37,7 +37,7 @@ footer {
 
 .header-content, .contact-content {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto; /* Центрирование содержимого */
 }
 
 h1, .contact-title {
@@ -51,17 +51,18 @@ p, header p, .service p, .case p {
 }
 
 .btn, nav a, .contact-links a, .contact-form button {
-    background: #ffffff42;
-    color: #ffffff; /* Цвет текста кнопок */
+    background: #ffffff42; /* Полупрозрачный белый фон для кнопок */
+    color: #ffffff; /* Белый цвет текста кнопок */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover, nav a:hover, .contact-links a:hover, .contact-form button:hover {
-    background: #413434;
+    background: #413434; /* Темно-зеленый фон при наведении */
 }
 
+/* Навигация */
 nav {
     margin-top: 20px;
 }
@@ -69,14 +70,28 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 10px; /* Отступы между ссылками */
     font-size: 1.2em;
+    padding: 5px 10px; /* Внутренние отступы ссылок */
+    display: inline-block; /* Делаем ссылки блочными элементами */
+}
+
+@media (max-width: 768px) {
+    /* Дополнительные стили для мобильных устройств */
+    nav {
+        overflow: auto; /* Включаем прокрутку для навигации */
+    }
+    
+    nav a {
+        margin: 5px; /* Увеличиваем отступы между ссылками */
+    }
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Подчеркивание ссылки при наведении */
 }
 
+/* Контейнеры сервисов и проектов */
 .services-container, .cases-container {
     display: flex;
     justify-content: center;
@@ -84,7 +99,7 @@ nav a:hover {
 }
 
 .service, .case {
-    background: #8b7d8d;
+    background: #8b7d8d; /* Фон блоков сервисов и проектов */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -94,7 +109,7 @@ nav a:hover {
 }
 
 .service:hover, .case:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Поднимаем блок при наведении */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -102,10 +117,10 @@ nav a:hover {
     font-size: 1.5em;
 }
 
+/* Слайдер портфолио */
 .portfolio-slider {
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Центрируем слайдер */
 }
 
 .portfolio-item {
@@ -118,32 +133,8 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.slick-prev, .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5em;
-}
 
-.slick-prev {
-    left: 20px;
-}
-
-.slick-next {
-    right: 20px;
-}
-
-.slick-prev:hover, .slick-next:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
+/* Ссылки в контактной информации */
 .contact-links {
     list-style: none;
     padding: 0;
@@ -153,10 +144,11 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+/* Форма обратной связи */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(89, 47, 106, 0.396);
+    background: rgba(89, 47, 106, 0.396); /* Полупрозрачный фон формы */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -181,42 +173,47 @@ nav a:hover {
 }
 
 .contact-form form button {
-    background: #ffffff42;
-    color: #eeebeb;
+    background: #ffffff42; /* Полупрозрачный белый фон кнопки */
+    color: #eeebeb; /* Светлый цвет текста */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-    margin: auto; /* Центрирование кнопки по горизонтали */
-    display: block; /* Делаем кнопку блочным элементом, чтобы задать ей ширину */
+    margin: auto; /* Центрируем кнопку по горизонтали */
+    display: block; /* Делаем кнопку блочным элементом */
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
 }
 
 .contact-form form button:hover {
-    background: #322249;
+    background: #322249; /* Темно-фиолетовый фон при наведении на кнопку */
 }
 
+/* Подвал сайта */
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный темный фон подвала */
     color: white;
     width: 100%;
     box-sizing: border-box;
 }
 
 .btn {
-    background: rgba(255, 255, 255, 0.396);
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.396); /* Полупрозрачный белый фон кнопки */
+    color: #ffffff; /* Белый цвет текста */
     padding: 15px 30px; /* Увеличение отступов вокруг текста кнопки */
     text-decoration: none;
     border-radius: 5px;
     display: inline-block; /* Делаем кнопку блочным элементом */
     margin-top: 10px; /* Добавляем верхний отступ */
     margin-bottom: 30px;
-    font-size: 2.6em; /* Увеличиваем размер текста кнопки */
+    font-size: 2.6em; /* Увеличение размера текста кнопки */
 }
 
 .btn:hover {
-    background: #4c153f;
+    background: #4c153f; /* Темно-фиолетовый фон при наведении на кнопку */
 }
